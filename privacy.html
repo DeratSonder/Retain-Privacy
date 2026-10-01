@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retain Privacy Policy</title>
+<meta name="description" content="Retain privacy policy — what data the app collects and how it is used.">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F2FF;--surface:#FFFFFF;--edge:#E4DDFF;--text:#1E1846;--muted:#5E5880;--violet:#6C4DF6;--violet-edge:#4B2FD1;--violet-text:#5B3DE8;--deco:#E9E3FF;--star:#FFC83D;--nebula:#FF7AB6;--mint:#5FD4A8;--line:#ECE7FF}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#120F2A;--surface:#1D1940;--edge:#0B0920;--text:#F1EEFF;--muted:#ABA5CC;--violet-text:#B4A3FF;--deco:#1A1638;--line:#2C2754}}
+:root[data-theme="dark"]{--bg:#120F2A;--surface:#1D1940;--edge:#0B0920;--text:#F1EEFF;--muted:#ABA5CC;--violet-text:#B4A3FF;--deco:#1A1638;--line:#2C2754}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:500 16px/1.65 "Nunito",system-ui,sans-serif;overflow-x:hidden}
+.sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.sky i{position:absolute;border-radius:50%}
+.sky .moon{width:520px;height:520px;background:var(--deco);top:-260px;right:-160px}
+.sky .p1{width:38px;height:38px;background:var(--nebula);box-shadow:inset -6px -6px 0 rgba(0,0,0,.12);top:120px;left:6%}
+.sky .p2{width:24px;height:24px;background:var(--mint);box-shadow:inset -4px -4px 0 rgba(0,0,0,.12);top:240px;right:8%}
+.sky .s{color:var(--star);font-style:normal;font-size:22px;border-radius:0}
+main{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:28px 16px 56px}
+header{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+header img{width:56px;height:56px;border-radius:16px;box-shadow:0 4px 0 var(--violet-edge)}
+.brand{font:800 30px/1 "Baloo 2",system-ui,sans-serif;color:var(--violet-text);margin:0}
+.by{font-size:14px;color:var(--muted);white-space:nowrap}
+.langs{margin-left:auto;display:flex;gap:6px}
+.langs button{font:800 14px "Nunito",sans-serif;border:2px solid var(--line);background:var(--surface);color:var(--muted);border-radius:999px;padding:6px 14px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:#fff;box-shadow:0 3px 0 var(--violet-edge)}
+.card{background:var(--surface);border-radius:28px;padding:28px 24px;box-shadow:0 6px 0 var(--edge)}
+h1{font:800 32px/1.15 "Baloo 2",system-ui,sans-serif;margin:0 0 6px;text-wrap:balance}
+.updated{display:inline-block;font-size:13px;font-weight:700;color:var(--violet-text);background:var(--deco);border-radius:999px;padding:3px 12px;margin-bottom:8px}
+h2{font:800 21px/1.3 "Baloo 2",system-ui,sans-serif;margin:30px 0 8px;color:var(--violet-text)}
+p,li{color:var(--text)}
+ul{padding-left:22px}
+li{margin:4px 0}
+strong{font-weight:800}
+a{color:var(--violet-text)}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:15px}
+th,td{text-align:left;padding:10px 12px;border-bottom:2px solid var(--line);vertical-align:top}
+th{font-weight:800;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:14px;margin-top:28px}
+.links{display:grid;gap:12px;margin-top:18px}
+.links a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-weight:800;color:var(--text);background:var(--bg);border-radius:18px;padding:16px 18px;box-shadow:0 4px 0 var(--line)}
+.links a span{color:var(--violet-text)}
+[data-lang]{display:none}
+html:not(.js) [data-lang]{display:block}
+html.lang-vi [data-lang="vi"],html.lang-en [data-lang="en"]{display:block}
+@media (max-width:480px){header{gap:10px}header img{width:44px;height:44px;border-radius:13px}.langs button{padding:5px 10px}h1{font-size:25px}.card{padding:22px 18px;border-radius:24px}.brand{font-size:24px}}
+@media (max-width:0px){h1{font-size:27px}.card{padding:22px 18px;border-radius:24px}.brand{font-size:26px}}
+</style>
+<script>
+(function(){var d=document.documentElement;d.classList.add('js');var l;try{l=localStorage.getItem('lang')}catch(e){}
+if(!l)l=(navigator.language||'').toLowerCase().indexOf('vi')===0?'vi':'en';
+function set(x){d.classList.remove('lang-vi','lang-en');d.classList.add('lang-'+x);d.lang=x;
+document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===x)});
+try{localStorage.setItem('lang',x)}catch(e){}}
+document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.langs button').forEach(function(b){b.onclick=function(){set(b.dataset.set)}});set(l)});set(l)})();
+</script>
+</head>
+<body>
+<div class="sky" aria-hidden="true"><i class="moon"></i><i class="p1"></i><i class="p2"></i><i class="s" style="top:46%;right:3%">★</i><i class="s" style="top:78%;left:2%;font-size:15px">★</i></div>
+<main>
+<header>
+<a href="./"><img src="icon.png" alt="Retain"></a>
+<div><p class="brand">Retain</p><div class="by">by Nunki Labs</div></div>
+<div class="langs" role="group" aria-label="Language"><button data-set="vi">VI</button><button data-set="en">EN</button></div>
+</header>
+<article class="card" data-lang="vi"><h1>Chính sách quyền riêng tư — Retain</h1><span class="updated">Cập nhật lần cuối: 30/09/2026</span><p>Retain là ứng dụng học từ vựng tiếng Anh do <strong>Nunki Labs</strong> phát triển. Chính sách này giải thích Retain thu thập dữ liệu gì, dùng để làm gì và bạn có những quyền gì.</p>
+<h2>1. Dữ liệu chúng tôi thu thập</h2>
+<p><strong>Tài khoản</strong></p>
+<ul>
+<li>Khi mở app lần đầu, bạn dùng ở <strong>chế độ khách</strong>: app tạo một mã định danh ngẫu nhiên, không kèm tên hay email.</li>
+<li>Nếu bạn <strong>đăng nhập bằng Google</strong>, chúng tôi nhận từ Google địa chỉ email, tên và ảnh đại diện của tài khoản Google đó. Chúng tôi không nhận mật khẩu Google của bạn.</li>
+<li>Nếu bạn <strong>đăng nhập bằng mã email</strong>, chúng tôi lưu địa chỉ email để gửi mã đăng nhập.</li>
+</ul>
+<p><strong>Dữ liệu học tập</strong></p>
+<ul>
+<li>Các từ bạn thêm hoặc học, nghĩa, ví dụ, câu bạn tự viết để luyện tập.</li>
+<li>Lịch ôn tập, kết quả từng lần ôn, thời gian học và tiến độ đọc sách trong app.</li>
+</ul>
+<p>Những dữ liệu này được đồng bộ lên máy chủ để bạn không mất tiến độ khi đổi máy hoặc cài lại app.</p>
+<p><strong>Thanh toán</strong></p>
+<ul>
+<li>Gói Premium được mua qua <strong>Google Play</strong>. Chúng tôi chỉ nhận mã giao dịch để xác nhận gói đang hoạt động. Chúng tôi <strong>không</strong> nhận hay lưu thông tin thẻ hoặc phương thức thanh toán của bạn.</li>
+</ul>
+<p><strong>Chỉ lưu trên máy của bạn</strong></p>
+<ul>
+<li>Tên hiển thị bạn đặt, giao diện sáng/tối, ngôn ngữ và cài đặt thông báo nhắc học. Những dữ liệu này không được gửi lên máy chủ.</li>
+</ul>
+<h2>2. Chúng tôi dùng dữ liệu để làm gì</h2>
+<ul>
+<li>Đăng nhập, sao lưu và đồng bộ tiến độ học giữa các thiết bị.</li>
+<li>Tính lịch ôn tập phù hợp với trí nhớ của bạn.</li>
+<li>Tính năng AI: khi bạn dùng <strong>tự điền thông tin từ</strong> hoặc <strong>chấm câu</strong>, từ hoặc câu đó được gửi qua máy chủ của chúng tôi tới dịch vụ AI Google Gemini để xử lý. Chúng tôi không gửi email hay tên của bạn kèm theo.</li>
+<li>Xác nhận và duy trì gói Premium.</li>
+</ul>
+<p>Chúng tôi <strong>không</strong> hiển thị quảng cáo, <strong>không</strong> dùng công cụ theo dõi hay phân tích hành vi, và <strong>không</strong> bán dữ liệu của bạn cho bất kỳ ai.</p>
+<h2>3. Bên thứ ba xử lý dữ liệu</h2>
+<table>
+<thead>
+<tr>
+<th>Dịch vụ</th>
+<th>Mục đích</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supabase</td>
+<td>Máy chủ lưu tài khoản và dữ liệu học tập</td>
+</tr>
+<tr>
+<td>Google Sign-In</td>
+<td>Đăng nhập bằng tài khoản Google</td>
+</tr>
+<tr>
+<td>Google Gemini API</td>
+<td>Xử lý tính năng AI (tự điền từ, chấm câu)</td>
+</tr>
+<tr>
+<td>Google Play Billing</td>
+<td>Xử lý thanh toán gói Premium</td>
+</tr>
+</tbody>
+</table>
+<p>Mỗi dịch vụ trên xử lý dữ liệu theo chính sách quyền riêng tư của riêng họ.</p>
+<h2>4. Lưu trữ và bảo mật</h2>
+<ul>
+<li>Dữ liệu được truyền qua kết nối mã hoá (HTTPS).</li>
+<li>Mỗi tài khoản chỉ đọc và ghi được dữ liệu của chính mình.</li>
+<li>Chúng tôi giữ dữ liệu cho tới khi bạn yêu cầu xoá. Tài khoản khách không hoạt động trong thời gian dài có thể bị xoá tự động.</li>
+</ul>
+<h2>5. Quyền của bạn</h2>
+<ul>
+<li><strong>Xem và sửa:</strong> mọi từ vựng và tiến độ đều hiển thị và chỉnh sửa được trong app.</li>
+<li><strong>Xoá tài khoản và dữ liệu:</strong> gửi email tới <strong>[EMAIL LIÊN HỆ]</strong> với tiêu đề "Xoá tài khoản Retain", kèm email bạn dùng để đăng nhập. Chúng tôi sẽ xoá tài khoản cùng toàn bộ dữ liệu học tập trong vòng 30 ngày.</li>
+<li><strong>Gỡ liên kết Google:</strong> bạn có thể thu hồi quyền truy cập của Retain bất cứ lúc nào tại myaccount.google.com → Bảo mật → Ứng dụng bên thứ ba.</li>
+</ul>
+<p>Lưu ý: đăng xuất hoặc gỡ app <strong>không</strong> xoá dữ liệu đã sao lưu trên máy chủ.</p>
+<h2>6. Trẻ em</h2>
+<p>Retain không nhắm tới trẻ em dưới 13 tuổi và không cố ý thu thập dữ liệu của trẻ dưới 13 tuổi. Nếu bạn biết một trẻ em đã cung cấp dữ liệu cho chúng tôi, hãy liên hệ để chúng tôi xoá.</p>
+<h2>7. Thay đổi chính sách</h2>
+<p>Khi có thay đổi quan trọng, chúng tôi sẽ cập nhật trang này, sửa ngày cập nhật ở đầu trang và thông báo trong app nếu cần.</p>
+<h2>8. Liên hệ</h2>
+<p>Nunki Labs — <strong>[EMAIL LIÊN HỆ]</strong></p></article>
+<article class="card" data-lang="en"><h1>Privacy Policy — Retain</h1><span class="updated">Last updated: September 30, 2026</span><p>Retain is an English vocabulary app developed by <strong>Nunki Labs</strong>. This policy explains what data Retain collects, how it is used, and your rights.</p>
+<h2>1. Data we collect</h2>
+<p><strong>Account</strong></p>
+<ul>
+<li>On first launch you use Retain as a <strong>guest</strong>: the app creates a random identifier with no name or email attached.</li>
+<li>If you <strong>sign in with Google</strong>, we receive that Google account's email address, name and profile picture. We never receive your Google password.</li>
+<li>If you <strong>sign in with an email code</strong>, we store your email address in order to send you the code.</li>
+</ul>
+<p><strong>Learning data</strong></p>
+<ul>
+<li>Words you add or study, their meanings and examples, and sentences you write for practice.</li>
+<li>Your review schedule, the result of each review, study time and reading progress in the app's books.</li>
+</ul>
+<p>This data is synced to our servers so you don't lose your progress when you switch phones or reinstall the app.</p>
+<p><strong>Payments</strong></p>
+<ul>
+<li>Premium is purchased through <strong>Google Play</strong>. We only receive a purchase token to confirm that your subscription is active. We <strong>never</strong> receive or store your card or payment details.</li>
+</ul>
+<p><strong>Stored only on your device</strong></p>
+<ul>
+<li>Your display name, light/dark theme, language and study-reminder settings. These are not sent to our servers.</li>
+</ul>
+<h2>2. How we use data</h2>
+<ul>
+<li>To sign you in, back up your progress and sync it across devices.</li>
+<li>To schedule reviews based on how well you remember each word.</li>
+<li>AI features: when you use <strong>word autofill</strong> or <strong>sentence checking</strong>, that word or sentence is sent through our server to the Google Gemini AI service for processing. Your email and name are not sent with it.</li>
+<li>To confirm and maintain your Premium subscription.</li>
+</ul>
+<p>We show <strong>no ads</strong>, use <strong>no tracking or analytics tools</strong>, and <strong>never sell</strong> your data.</p>
+<h2>3. Third-party processors</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Supabase</td>
+<td>Server hosting for accounts and learning data</td>
+</tr>
+<tr>
+<td>Google Sign-In</td>
+<td>Signing in with a Google account</td>
+</tr>
+<tr>
+<td>Google Gemini API</td>
+<td>AI features (word autofill, sentence checking)</td>
+</tr>
+<tr>
+<td>Google Play Billing</td>
+<td>Premium payments</td>
+</tr>
+</tbody>
+</table>
+<p>Each service processes data under its own privacy policy.</p>
+<h2>4. Storage and security</h2>
+<ul>
+<li>Data is sent over encrypted connections (HTTPS).</li>
+<li>Each account can only read and write its own data.</li>
+<li>We keep your data until you ask us to delete it. Guest accounts that stay inactive for a long time may be deleted automatically.</li>
+</ul>
+<h2>5. Your rights</h2>
+<ul>
+<li><strong>View and edit:</strong> all your words and progress are visible and editable in the app.</li>
+<li><strong>Delete your account and data:</strong> email <strong>[CONTACT EMAIL]</strong> with the subject "Delete my Retain account" and include the email you sign in with. We will delete your account and all learning data within 30 days.</li>
+<li><strong>Disconnect Google:</strong> you can revoke Retain's access at any time at myaccount.google.com → Security → Third-party apps.</li>
+</ul>
+<p>Note: signing out or uninstalling the app does <strong>not</strong> delete the data backed up on our servers.</p>
+<h2>6. Children</h2>
+<p>Retain is not directed at children under 13 and does not knowingly collect data from children under 13. If you believe a child has given us data, please contact us and we will delete it.</p>
+<h2>7. Changes</h2>
+<p>If this policy changes in an important way, we will update this page, change the date at the top, and notify you in the app when appropriate.</p>
+<h2>8. Contact</h2>
+<p>Nunki Labs — <strong>[CONTACT EMAIL]</strong></p></article>
+<footer>© 2026 Nunki Labs</footer>
+</main>
+</body>
+</html>
